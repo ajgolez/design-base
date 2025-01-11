@@ -1,0 +1,38 @@
+{
+  "name": "design-systems",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github-personal:agolez13/design-systems.git",
+  "author": "Antonius Golez",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "packages/components/*",
+    "packages/components/*/bindings/*"
+  ],
+  "scripts": {
+    "build": "NODE_NO_WARNINGS=1 lerna run build",
+    "test": "lerna run test",
+    "typecheck": "lerna run typecheck",
+    "lint": "lerna run lint",
+    "pkg:upgrade": "npx lerna-update-wizard",
+    "postinstall": "yarn workspace @ajg/styles build && npx simple-git-hooks"
+  },
+  "devDependencies": {
+    "lerna": "^8.1.9",
+    "lerna-update-wizard": "^1.1.2",
+    "lint-staged": "^15.3.0",
+    "prettier": "^3.4.2",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,scss,md,mdx,graphql}": [
+      "prettier --write"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "pre-push": "npm run typecheck && npm run lint"
+  }
+}

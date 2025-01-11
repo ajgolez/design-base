@@ -1,0 +1,8 @@
+node_modules
+
+# Ignore all yarn.lock files
+**/yarn.lock
+
+# Exclude the root yarn.lock file
+!/yarn.lock
+*storybook.log

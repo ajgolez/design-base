@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    // Disallow unreachable code to avoid unnecessary or incorrect logic.
+    "allowUnreachableCode": false,
+
+    // Do not generate declaration files (.d.ts), often used for libraries.
+    "declaration": false,
+
+    // Enable support for experimental decorators (e.g., @decorator syntax).
+    "experimentalDecorators": true,
+
+    // Specify the library files to include during compilation (e.g., DOM APIs, ES2017 features).
+    "lib": ["dom", "es2017"],
+
+    // Use Node.js module resolution strategy to resolve modules in `node_modules`.
+    "moduleResolution": "node",
+
+    // Specify the module system for output files (e.g., ESNext modules for modern environments).
+    "module": "esnext",
+
+    // Specify the ECMAScript target version for the output files (e.g., ES2017).
+    "target": "es2017",
+
+    // Raise an error if there are unused local variables in the code.
+    "noUnusedLocals": true,
+
+    // Raise an error if there are unused function parameters in the code.
+    "noUnusedParameters": true,
+
+    // Specify that JSX syntax should be transformed for React using the React 17+ JSX runtime.
+    "jsx": "react-jsx",
+
+    // Enable interoperability between CommonJS and ES modules.
+    "esModuleInterop": true,
+
+    // Allow default imports from modules that don't have a default export.
+    "allowSyntheticDefaultImports": true,
+
+    // Enable all strict type-checking options to catch potential errors early.
+    "strict": true
+  },
+  // Include all files in the `src` directory for compilation.
+  "include": ["src"],
+
+  // Exclude the `node_modules` directory from compilation.
+  "exclude": ["node_modules"]
+}
