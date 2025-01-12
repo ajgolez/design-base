@@ -1,0 +1,9 @@
+steps:
+  - label: ":yarn: Install Dependencies"
+    command: "yarn install"
+  
+  - label: ":hammer: Build Project"
+    command: "yarn build"
+
+  - label: ":white_check_mark: Run Tests"
+    command: "yarn test"
