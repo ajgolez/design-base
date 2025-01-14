@@ -1,3 +1,6 @@
+agents:
+    queue: "default"
+    
 steps:
   - label: ":yarn: Install Dependencies"
     command: "yarn install"
@@ -7,3 +10,4 @@ steps:
 
   - label: ":white_check_mark: Run Tests"
     command: "yarn test"
+
